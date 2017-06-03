@@ -13,24 +13,25 @@ $name_db=$_SESSION["name_db"];
 
 
 #======== Socket config ===================================
-$local_ip_bind="192.168.2.1";
+$local_ip_bind="192.168.1.1";
 $local_port_bind=50051;
 
 $module_ip = $_POST["web_ipaddr"];
 $module_port = $_POST["web_portno"];
 $module_mess = $_POST["web_mess"];
 $relay_time=$_POST["time"];
+if ($module_mess =="update_Relay"){}else{
 if ($relay_time =="") {$module_data=$module_mess;}
-                  else {$module_data=$module_mess . "+time=" . $relay_time;}   
+                  else {if ($relay_time>0){$relay_time=$relay_time*60;} $module_data=$module_mess . "+time=" . $relay_time;}
 // Отправляем пакет включения реле формата Relay+R3+ON+time=15
-        $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP); 
+        $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
         $sock_data = socket_connect($sock, $module_ip, $module_port);
         $len_pack = strlen($module_data);
-        $sock_data = socket_write($sock, $module_data, $len_pack); 
+        $sock_data = socket_write($sock, $module_data, $len_pack);
         socket_close($sock);
-sleep(1);
+sleep(1); }
 // Соединяемся с базой для очистки таблицы Relay с адресом module_ip
-   
+
 
 $dbcnx= mysql_connect("127.0.0.1",$userdb,$passdb) or die("<html><BODY BGCOLOR=#4A6B7C>
                                                     <Script Language='JavaScript'>
@@ -43,11 +44,11 @@ $zapros2 = mysql_query("DELETE FROM Relay WHERE obtaine_ip='$module_ip'");
 // Отправляем пакет для обновления лаблицы relay на модуль с адресом module_ip
 
 $module_data="update_Relay";
-        $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP); 
+        $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
         $sock_data = socket_connect($sock, $module_ip, $module_port);
         $len_pack = strlen($module_data);
-        $sock_data = socket_write($sock, $module_data, $len_pack); 
+        $sock_data = socket_write($sock, $module_data, $len_pack);
         socket_close($sock);
-sleep(2);        
-header("Location: /cgi-bin/start.php");
+sleep(1);
+header("Location: /cgi-bin/relay_onoff.php?obtaine_ip=$module_ip");
 ?>

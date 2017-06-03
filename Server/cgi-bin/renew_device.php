@@ -2,7 +2,7 @@
 session_start();
 if ($_SESSION['nnn']=='' && $_SESSION['ppp']=='') header("Location: /index.html");
 #======== Socket config ===================================
-$local_ip_bind="192.168.2.1";
+$local_ip_bind="192.168.1.1";
 $local_port_bind=50051;
 
 $module_ip = $_POST['web_ipaddr'];
@@ -25,13 +25,13 @@ while ($res = mysql_fetch_array($zapros)){
 
 
 mysql_close($dbcnx);
-        $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP); 
+        $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
 //        $sock_data = socket_set_option($sock, SOL_SOCKET, SO_BROADCAST, 1);
         $sock_data = socket_connect($sock, $module_ip, $module_port);
         $len_pack = strlen($module_mess);
-        $sock_data = socket_write($sock, $module_mess, $len_pack); 
+        $sock_data = socket_write($sock, $module_mess, $len_pack);
         socket_close($sock);
 
-sleep(5);
+sleep(3);
 header("Location: /cgi-bin/start.php");
 ?>
