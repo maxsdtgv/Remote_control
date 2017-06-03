@@ -1,0 +1,50 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F67J60 -DL -O11111114 -fo25 -N"C:\Users\Dinka\Desktop\New_dev_67j60_4-release_Relay\MyProject.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\Dinka\Desktop\New_dev_67j60_4-release_Relay\" -SP"C:\Program Files\Mikroelektronika\mikroC PRO for PIC\defs\" -SP"C:\Program Files\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"D:\Dinka2\New_dev_67j60_4-release_Relay\" -SP"D:\Dinka2\Din\SPB\New_dev_67j60_4-release_Relay\" -SP"D:\Dinka2\Din\SPB\New_dev_67j60_4\" -SP"D:\Dinka2\Din\SPB\New_dev_67j60_3\" -SP"D:\Dinka2\Din\New_dev_67j60_2\" "MyProject.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CType.mcl" "__Lib_CString.mcl" "__Lib_CStdlib.mcl" "__Lib_Conversions.mcl" "__Lib_ETHERNET_j60.mcl" "__Lib_SPI_c345.mcl"	 
+warning: 0	1501	Specified search path does not exist: 'C:\Program Files\Mikroelektronika\mikroC PRO for PIC\defs'	 
+warning: 0	1501	Specified search path does not exist: 'C:\Program Files\Mikroelektronika\mikroC PRO for PIC\uses\P18'	 
+warning: 0	1501	Specified search path does not exist: 'D:\Dinka2\New_dev_67j60_4-release_Relay'	 
+warning: 0	1501	Specified search path does not exist: 'D:\Dinka2\Din\SPB\New_dev_67j60_4-release_Relay'	 
+warning: 0	1501	Specified search path does not exist: 'D:\Dinka2\Din\SPB\New_dev_67j60_4'	 
+warning: 0	1501	Specified search path does not exist: 'D:\Dinka2\Din\SPB\New_dev_67j60_3'	 
+warning: 0	1501	Specified search path does not exist: 'D:\Dinka2\Din\New_dev_67j60_2'	 
+hint: 0	1139	Available RAM: 3691 [bytes], Available ROM: 131064 [bytes]	 
+diagnostics: 0	122	Compilation Started	P18F67J60.c
+diagnostics: 2004	123	Compiled Successfully	P18F67J60.c
+diagnostics: 0	122	Compilation Started	__Lib_Delays.c
+diagnostics: 172	123	Compiled Successfully	__Lib_Delays.c
+diagnostics: 0	122	Compilation Started	__ethj60.h
+warning: 207	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 331	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 336	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 340	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 341	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 353	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 356	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 357	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 368	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 372	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 373	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 384	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 387	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 388	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 399	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 403	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 404	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 415	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 418	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 419	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 430	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 433	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 443	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 453	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 463	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 473	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 483	1506	Implicit conversion of pointer to int	MyProject.c
+warning: 493	1506	Implicit conversion of pointer to int	MyProject.c
+diagnostics: 510	123	Compiled Successfully	MyProject.c
+diagnostics: 0	127	All files Compiled in 109 ms	 
+hint: 0	1144	Used RAM (bytes): 2735 (74%)  Free RAM (bytes): 956 (26%)	Used RAM (bytes): 2735 (74%)  Free RAM (bytes): 956 (26%)
+hint: 0	1144	Used ROM (bytes): 21467 (16%)  Free ROM (bytes): 109597 (84%)	Used ROM (bytes): 21467 (16%)  Free ROM (bytes): 109597 (84%)
+diagnostics: 0	125	Project Linked Successfully	MyProject.mcppi
+diagnostics: 0	128	Linked in 157 ms	 
+diagnostics: 0	129	Project 'MyProject.mcppi' completed: 391 ms	 
+diagnostics: 0	103	Finished successfully: 18 May 2017, 07:06:19	MyProject.mcppi
